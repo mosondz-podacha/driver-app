@@ -1,0 +1,16 @@
+{
+  "name": "pytak-driver-app",
+  "version": "1.0.0",
+  "description": "ПОДАЧА - Водитель (Android)",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.2.0",
+    "@capacitor/android": "^7.2.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.2.0"
+  }
+}

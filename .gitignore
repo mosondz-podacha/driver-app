@@ -1,0 +1,21 @@
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/captures/
+android/local.properties
+android/gradle-tool/
+*.iml
+.idea/
+
+# Capacitor
+www/
+capacitor-cordova-android-plugins/
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log

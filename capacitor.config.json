@@ -1,0 +1,13 @@
+{
+  "appId": "ru.intercitygo.driver",
+  "appName": "ПОДАЧА Водитель",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "https://intercitygo.ru/driver/index.html",
+    "cleartext": false
+  },
+  "android": {
+    "allowMixedContent": true
+  }
+}
