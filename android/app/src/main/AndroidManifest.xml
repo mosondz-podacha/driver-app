@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ru.intercitygo.driver">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Разрешения для геолокации, интернета и фоновой работы -->
     <uses-permission android:name="android.permission.INTERNET" />

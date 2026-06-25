@@ -21,26 +21,35 @@
 @rem
 @rem ##########################################################################
 
+@rem Set local scope for the variables with windows NT shell
+if "%OS%"=="Windows_NT" setlocal
+
 set DIRNAME=%~dp0
 if "%DIRNAME%"=="" set DIRNAME=.
 @rem This is normally unused
 set APP_BASE_NAME=%~n0
 set APP_HOME=%DIRNAME%
 
+@rem Resolve any "." and ".." in APP_HOME to make it shorter.
+for %%i in ("%APP_HOME%") do set APP_HOME=%%~fi
+
+@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
 set DEFAULT_JVM_OPTS=
-set GRADLE_HOME=
 
-set JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-17.0.19.10-hotspot
-set ANDROID_HOME=C:\android-sdk
-set GRADLE_USER_HOME=C:\build_gradle\.gradle
+@rem Find java.exe
+if not "%JAVA_HOME%"=="" set JAVA_EXE=%JAVA_HOME%\bin\java.exe
+if exist "%JAVA_EXE%" goto execute
+set JAVA_EXE=java.exe
 
-rem Используем распакованный Gradle 8.2 из папки проекта
-set GRADLE_HOME=C:\Users\рс\OneDrive\Desktop\PLATFORMA_PODACHA\driver-app\android\gradle-tool\gradle-8.2
+:execute
+@rem Setup the command line
 
-if not exist "%GRADLE_HOME%\bin\gradle.bat" (
-    echo Gradle 8.2 not found at %GRADLE_HOME%
-    exit /b 1
-)
+set CLASSPATH=%APP_HOME%\gradle\wrapper\gradle-wrapper.jar
 
-echo Building with Gradle 8.2...
-"%GRADLE_HOME%\bin\gradle.bat" %*
+@rem Execute Gradle
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% "-Dorg.gradle.appname=%APP_BASE_NAME%" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %*
+
+@rem End local scope for the variables with windows NT shell
+if "%OS%"=="Windows_NT" endlocal
+
+:omega

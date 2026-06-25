@@ -8,6 +8,16 @@ android/gradle-tool/
 *.iml
 .idea/
 
+# IDE
+*.iml
+.idea/
+.gradle/
+build/
+
+# Python
+__pycache__/
+*.pyc
+
 # Capacitor
 www/
 capacitor-cordova-android-plugins/

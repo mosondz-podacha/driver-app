@@ -1,2 +1,2 @@
-rootProject.name = "ПОДАЧА Водитель"
+rootProject.name = "PodachaDriver"
 include ':app'
